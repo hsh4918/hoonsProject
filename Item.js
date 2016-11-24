@@ -24,6 +24,8 @@ spiderwdb.prototype.collide = function() {
    if(Game.speed > Game.initSpeed + 1)
    Game.speed -= Game.speed * 20 / 80;
   }
+
+
 };
 
 spiderweb.prototype.draw = function() {
