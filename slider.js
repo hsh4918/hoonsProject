@@ -60,7 +60,7 @@ SliderDiv.prototype.move = function(_direction, _distance) {
   var to = _direction < 0 ? '+=' : '-=';
 
   // Animation
-  this.viewport.animate({
+  this.viewport.animate({//그냥 화면이 바뀌는게 아니라 지나가는게 보이는것처럼
     left: to + distance
   }, this.MOVE_SPEED, function() {
 
@@ -85,12 +85,12 @@ SliderDiv.prototype.moveTo = function(_index) {
 };
 
 SliderDiv.prototype.handleButtonVisibility = function() {
-  this.nextButton.show();
+  this.nextButton.show();//버튼 시각화
   this.prevButton.show()
   if(this.currentSlide == this.slideObj.length - 1)
-    this.nextButton.hide();
+    this.nextButton.hide(); //끝까지가면 다음버튼은 안보임
   if(this.currentSlide == 0)
-    this.prevButton.hide()
+    this.prevButton.hide()// 마찬가지
 };
 
 SliderDiv.prototype.getViewportHeight = function(_index) {
@@ -100,7 +100,7 @@ SliderDiv.prototype.getViewportHeight = function(_index) {
   return newH;
 };
 
-SliderDiv.prototype.keyEvent = function(e) {
+SliderDiv.prototype.keyEvent = function(e) {//마우스클릭 말고도 키보드로도 입력받을수 있도록
   if(!this.HAS_KEY_EVENTS) return false;
   switch(e.keyCode) {
     case(39): this.next();break;
