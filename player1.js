@@ -10,7 +10,7 @@ var Player = {
   isJumping: false,
   isFalling: true,
   lastY: 0, //마지막 Y축은 0
-  groundY:55550,
+  groundY:50,
   maxJumpHeight: 80,//최대점프높이
   velocity: 0,//속도 : 0
   reachedPeak: false,
